@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Events
     closeBtn.addEventListener('click', closeModal);
-    window.addEventListener('click', outsideClick);
+   
 
     // Open
     function openModal() {
@@ -26,5 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = 'none';
         }
     }
+setTimeout(showStuff, 5000);
+console.debug('Start page');
+function showStuff(modalfooter){
+    console.debug('Display');
+    document.getElementById("modalfooter").style.display = "inline";
+}
 
-});
+})

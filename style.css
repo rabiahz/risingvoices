@@ -23,16 +23,11 @@ body {
 .box {
     float: left;
     position: relative;
-    width: 25%;
-    height: 60px;
+    width: 20%;
+    height: 50px;
     padding-bottom: 10%;
     overflow: hidden;
     display: flex;
-}
-.box:hover:{
-  
-
-   
 }
 
 
@@ -76,8 +71,6 @@ body {
     bottom: 10px;
     /*   overflow: hidden;*/
     align-content: center;
-        text-align: center;
-
     padding: 5px;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -153,7 +146,8 @@ body.touch .boxInner.touchFocus .titleBox {
 
 .fText {
     font-family: 'Futura', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+    letter-spacing: 1.5px
 }
 
 .modal {
@@ -173,7 +167,7 @@ body.touch .boxInner.touchFocus .titleBox {
 
 
 .modal-content {
-    width: 100%;
+    width: 80%;
     height: 100%;
     /*    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);*/
     animation-name: modalopen;
@@ -209,13 +203,15 @@ body.touch .boxInner.touchFocus .titleBox {
     font-size: 1em;
     color: black;
     padding: 10px;
+    
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
+    background-color: #000;
 }
 
 @keyframes modalopen {
@@ -226,4 +222,28 @@ body.touch .boxInner.touchFocus .titleBox {
     to {
         opacity: 1;
     }
+}
+video {
+  height: 90%;
+  width: 99%;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .2em solid white; /* The typwriter cursor */
+  white-space: nowrap;/* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    background-color: black;
+    z-index: 1;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
